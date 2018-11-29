@@ -16,7 +16,7 @@ select
         INNER JOIN hosts_groups b  ON (a.hostid = b.hostid)
         INNER JOIN groups  c ON (b.groupid = c.groupid )
         RIGHT JOIN items d on (a.hostid = d.hostid)
-        
+
         where trim(d.error) ='' and a.status != 3 and a.status !=1 and 
         c.name like %s  and d.key_ not like %s and d.key_ not like %s
 ```
@@ -36,7 +36,7 @@ hosts表中的status代表监控主机的状态，1代表监控没有启用，3�
 
 
 
-#用来读取 主机组名	主机名	主机编号	键值名	键值编号	键值 健对应的最新值
+#用来读取 主机组名    主机名    主机编号    键值名    键值编号    键值 健对应的最新值
 
 
 import os
@@ -133,7 +133,7 @@ def main():
         INNER JOIN hosts_groups b  ON (a.hostid = b.hostid)
         INNER JOIN groups  c ON (b.groupid = c.groupid )
         RIGHT JOIN items d on (a.hostid = d.hostid)
-        
+
         where trim(d.error) ='' and a.status != 3 and a.status !=1 and c.name like %s  and d.key_ not like %s and d.key_ not like %s'''
     jszyData = sqlconn(sqlSten=message,group="group-%",disCov1="%.discovery",disCov2="%[{#%")
     dataList = []
@@ -197,22 +197,7 @@ def main():
 if __name__ == '__main__':
     dataZab = main()
     write_excel(data=dataZab)
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
-
-
 
 
 
