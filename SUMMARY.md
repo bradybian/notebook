@@ -4,4 +4,5 @@
 * [First Chapter](chapter1.md)
 * [linux](linux.md)
 * [db2](db2.md)
+* [python](python.md)
 
