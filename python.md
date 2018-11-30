@@ -199,5 +199,52 @@ if __name__ == '__main__':
     write_excel(data=dataZab)
 ```
 
+### 类的概念
+
+```
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+# Author:brady
+
+
+class Dog:
+    n = 123 #类的变量
+    def __init__(self,name,age,size):
+        #构造函数
+        #在进行实例化时做一些类的初始化工作
+        self.name = name  #实例变量（静态属性）作用域在实例身
+        self.age = age
+        self.size = size
+    def shot(self):  #类的方法，（动态属性）
+        print("%s wang wang wang !!"%(self.name))
+    def message(self):
+        print("Dog的名字是%s,年龄是%s,大小是%s"%(self.name,self.age,self.size))
+
+
+
+dog1 = Dog('jim','22','big')    #实例化
+dog1.name = 'jack'
+dog1.ages = '111'
+# del dog1.n
+
+print('dog1:',dog1.name,dog1.n)
+print('dog1:',dog1.ages)
+dog2 = Dog('tom','11','small')
+
+print(dog2.message())
+
+#类变量,在实例中也可以使用修改，删除，，仅限本实例
+#在实例中，首先寻找实例变量，然后查找类变量,在实例化的过程中，实例变量可以修改，删除，增加
+
+```
+
+
+
+
+
+
+
+
+
 
 
