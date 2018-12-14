@@ -37,7 +37,11 @@ mysql依赖libaio 这个库文件
 
 ```
 yum install libaio
+groupadd mysql   #创建组
+useradd -r -g mysql -s /bin/false mysql #创建用户 
 ```
+
+
 
 创建mysql配置文件
 
@@ -74,12 +78,11 @@ pid-file = /var/lib/mysql/data/mysql.pid
 ```
 mkdir -pv /var/lib/mysql/data  #创建数据目录
 mkdir -pv /var/log/mysql/  #创建日志目录
-
 ```
 
 进行初始化
 
- mysqld --defaults-file=/etc/my.cnf --initialize --user=mysql   \#使用刚才的配置文件进行初始化
+mysqld --defaults-file=/etc/my.cnf --initialize --user=mysql   \#使用刚才的配置文件进行初始化
 
 在输出的日志文件中会有默认密码产生
 
@@ -94,46 +97,6 @@ service mysql.server start #进行启动
 mysql -uroot -p"默认密码"
 alter user root identified by "123456"  #修改默认密码
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
