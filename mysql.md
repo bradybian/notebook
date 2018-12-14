@@ -99,5 +99,24 @@ mysql -uroot -p"默认密码"
 alter user root identified by "123456"  #修改默认密码
 ```
 
+最后，从mysql5.7起，mysql启用了密码验证插件。在8.0版本做了相应修改，5.7的设置，在8.0无法使用.
+
+可以在my.cnf配置文件添加
+
+```
+validate_password.policy = LOW #降低密码强度
+validate_password.length = 6  #设置密码长度
+```
+
+或者使用mysql\_secure\_installation  进行调整
+
+
+
+
+
+
+
+
+
 
 
