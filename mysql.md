@@ -49,7 +49,6 @@ vi /etc/my.cnf
 [client]
 port = 3306
 socket = /var/run/mysqld/mysql.sock
-default-character-set=utf8
 
 [mysqld]
 
@@ -116,10 +115,19 @@ validate_password.length = 6  #设置密码长度
 
 ## 1、准备
 
-本次架构为keepalived + mysql 主从，实现双主热备
+本次架构为keepalived + mysql 主主同步复制关系，保证两台mysql的数据一致性，实现双主热备
 
-| 主机    | ip              | 应用                  |
-| ------- | --------------- | --------------------- |
-| docker1 | 192.168.160.165 | mysql8.0   keepalived |
-| docker2 | 192.168.160.160 | mysql8.0   keepalived |
+| 主机    | ip                  | 应用                  |
+| ------- | ------------------- | --------------------- |
+| docker1 | 192.168.160.165     | mysql8.0   keepalived |
+| docker2 | 192.168.160.160     | mysql8.0   keepalived |
+|         | vip 192.168.160.177 |                       |
+
+## 2、进行配置
+
+1、和第一章一样，在两台机器上进行安装相同版本的mysql8.0
+
+
+
+
 
