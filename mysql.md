@@ -6,15 +6,15 @@ cat /etc/redhat-release   \#查看操作系统版本
 
 ## 1、下载mysql8.0二进制压缩包
 
-[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)     \#mysql下载地址![](/assets/import.png)选择相对应的操作系统及版本。注册登陆并下载
+[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)     \#mysql下载地址![](/image/import.png)选择相对应的操作系统及版本。注册登陆并下载
 
 ## 2、安装mysql
 
 ### 1、使用ftp工具将软件包上传到服务器
 
-在这里使用了rz工具![](/assets/rz.png)
+在这里使用了rz工具![](/image/rz.png)
 
-![](/assets/rz1.png)
+![](/image/rz1.png)
 
 ### 2、解压并安装
 
@@ -27,7 +27,7 @@ mv  mysql-8.0.13-el7-x86_64  /usr/local/mysql   #将解压后的文件移动到/
 
 tree -d /usr/local/mysql
 
-![](/assets/tree.png)
+![](/image/tree.png)
 
 安装依赖文件
 
@@ -109,14 +109,4 @@ validate_password.length = 6  #设置密码长度
 ```
 
 或者使用mysql\_secure\_installation  进行调整
-
-
-
-
-
-
-
-
-
-
 
