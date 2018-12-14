@@ -109,8 +109,6 @@ validate_password.length = 6  #设置密码长度
 
 或者使用mysql\_secure\_installation  进行调整
 
-
-
 # mysql8.0高可用双主热备
 
 ## 1、准备
@@ -121,8 +119,8 @@ validate_password.length = 6  #设置密码长度
 
 虚拟ip:  vip 192.168.160.177
 
-| 主机    | ip              | 应用                  |
-| ------- | --------------- | --------------------- |
+| 主机 | ip | 应用 |
+| --- | --- | --- |
 | docker1 | 192.168.160.165 | mysql8.0   keepalived |
 | docker2 | 192.168.160.160 | mysql8.0   keepalived |
 
@@ -178,12 +176,9 @@ replicate-do-db = test
 #不进行镜像处理的数据库
 
 replicate-ignore-db= mysql
-
 ```
 
-
-
- work2配置文件
+work2配置文件
 
 ```
 #主标服务标识号,必需唯一
@@ -229,7 +224,6 @@ replicate-do-db = test
 #不进行镜像处理的数据库
 
 replicate-ignore-db= mysql
-
 ```
 
 docker1的my.cnf
@@ -318,7 +312,7 @@ server mysql.server restart
 
 由于是使用二进制安装的，在启动过程中因权限原因报错
 
-![1544776527793](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1544776527793.png)
+![](/image/1544776527793.png)
 
 ```
 chown mysql:mysql /usr/lib/mysql  #进行授权
@@ -344,16 +338,16 @@ flush logs #刷新日志
 show master status \G;
 ```
 
-![1544777226459](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1544777226459.png)
+![](/image/1544777226459.png)
 
-docker2 
+docker2
 
 ```
 flush logs #刷新日志
 show master status \G;
 ```
 
-![1544777269385](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1544777269385.png)
+![](/image/1544777269385.png)
 
 通过sql语句在docker2上指定master为docker1
 
@@ -382,12 +376,11 @@ CHANGE MASTER TO
 ```
 start slave #启动
 show slave status\G;  #检查状态
-
 ```
 
 出现了错误
 
-![1544778095929](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1544778095929.png)
+![](/image/1544778095929.png)
 
 使用flush privileges,后，重启了一下，解决问题，
 
@@ -430,3 +423,4 @@ insert into Persons VALUES ('111','33','男')
 ```
 
 如果两边都有相同的表创建出来则说明成功
+
