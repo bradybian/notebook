@@ -5,4 +5,5 @@
 * [linux](linux.md)
 * [db2](db2.md)
 * [python](python.md)
+* [mysql](mysql.md)
 
