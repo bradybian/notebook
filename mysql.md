@@ -110,3 +110,16 @@ validate_password.length = 6  #设置密码长度
 
 或者使用mysql\_secure\_installation  进行调整
 
+
+
+# mysql8.0高可用双主热备
+
+## 1、准备
+
+本次架构为keepalived + mysql 主从，实现双主热备
+
+| 主机    | ip              | 应用                  |
+| ------- | --------------- | --------------------- |
+| docker1 | 192.168.160.165 | mysql8.0   keepalived |
+| docker2 | 192.168.160.160 | mysql8.0   keepalived |
+
