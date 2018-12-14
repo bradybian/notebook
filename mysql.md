@@ -36,7 +36,7 @@ mysql依赖libaio 这个库文件
 我这里是centos，所以使用yum进行安装
 
 ```
-yum install libaio  
+yum install libaio
 ```
 
 创建mysql配置文件
@@ -69,35 +69,31 @@ log_error = /var/log/mysql/error.log
 pid-file = /var/lib/mysql/data/mysql.pid
 ```
 
+创建对应目录
 
+```
+mkdir -pv /var/lib/mysql/data  #创建数据目录
+mkdir -pv /var/log/mysql/  #创建日志目录
 
+```
 
+进行初始化
 
+ mysqld --defaults-file=/etc/my.cnf --initialize --user=mysql   \#使用刚才的配置文件进行初始化
 
+在输出的日志文件中会有默认密码产生
 
+```
+cp /usr/local/mysql/support-files/mysql.server /etc/init.d/   #
+service mysql.server start #进行启动
+```
 
+使用初始化的密码进行登陆
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+mysql -uroot -p"默认密码"
+alter user root identified by "123456"  #修改默认密码
+```
 
 
 
