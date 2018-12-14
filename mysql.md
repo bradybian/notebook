@@ -38,10 +38,8 @@ mysql依赖libaio 这个库文件
 ```
 yum install libaio
 groupadd mysql   #创建组
-useradd -r -g mysql -s /bin/false mysql #创建用户 
+useradd -r -g mysql -s /bin/false mysql #创建用户
 ```
-
-
 
 创建mysql配置文件
 
@@ -78,6 +76,9 @@ pid-file = /var/lib/mysql/data/mysql.pid
 ```
 mkdir -pv /var/lib/mysql/data  #创建数据目录
 mkdir -pv /var/log/mysql/  #创建日志目录
+mkdir -pv /var/run/mysqld   #创建socket目录
+chown mysql:mysql /var/log/mysql/
+chown mysql:mysql /var/run/mysqld
 ```
 
 进行初始化
