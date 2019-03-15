@@ -40,57 +40,57 @@ su - weblogic   #切换用户
 java -jar fmw_12.1.3.0.0_wls.jar 
 ```
 
-![1552616971622](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552616971622.png)
+![1552616971622](images\1552616971622.png)
 
 选择安装目录
 
-![1552617066620](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617066620.png)
+![1552617066620](images\1552617066620.png)
 
 
 
-![1552617100795](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617100795.png)
+![1552617100795](images\1552617100795.png)
 
 检查先决条件
 
-![1552617125549](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617125549.png)
+![1552617125549](image\1552617125549.png)
 
-![1552617144849](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617144849.png)
+![1552617144849](image\1552617144849.png)
 
-![1552617172199](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617172199.png)
+![1552617172199](image\1552617172199.png)
 
-![1552617206142](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617206142.png)
+![1552617206142](image\1552617206142.png)
 
-![1552617234557](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617234557.png)
+![1552617234557](image\1552617234557.png)
 
 安装完成后配置域
 
-![1552617287184](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617287184.png)
+![1552617287184](image\1552617287184.png)
 
-![1552617327008](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617327008.png)
+![1552617327008](image\1552617327008.png)
 
 设置密码：（一般为weblogic/weblogic12c）
 
-![1552617439689](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617439689.png)
+![1552617439689](image\1552617439689.png)
 
-![1552617419692](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617419692.png)
+![1552617419692](image\1552617419692.png)
 
-![1552617476794](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617476794.png)
+![1552617476794](image\1552617476794.png)
 
-![1552617493506](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617493506.png)
+![1552617493506](image\1552617493506.png)
 
-![1552617508231](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617508231.png)
+![1552617508231](image\1552617508231.png)
 
 到这一步。安装已经完成
 
-![1552617948088](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552617948088.png)
+![1552617948088](image\1552617948088.png)
 
-## 4、验证
+##4、验证
 
 ```
 安装路径/data/weblogic/user_projects/domains/base_domain/bin
 
 启动：startWebLogic.sh
-后台启动：nohup ./startWebLogic.sh
+后台启动：nohup./startWebLogic.sh
 停止：stopWebLogic.sh
 ```
 
@@ -98,7 +98,7 @@ java -jar fmw_12.1.3.0.0_wls.jar
 
 账号和密码就是先前设置的
 
-![1552618327715](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552618327715.png)
+![1552618327715](image\1552618327715.png)
 
-![1552618469400](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552618469400.png)
+![1552618469400](image\1552618469400.png)
 
