@@ -10,12 +10,10 @@ yum install -y binutils   compat-libcap1 compat-libstdc++   compat-libstdc++*.i6
 rpm -q binutils compat-libstdc++ elfutils-libelf elfutils-libelf-devel elfutils-libelf-devel-static gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers kernel-headers ksh libaio libaio-devel libgcc libgomp libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel
 ```
 
-
-
 ## 2、验证udp 和tcp内核参数
 
 ```
-cat /proc/sys/net/ipv4/ip_local_port_range  
+cat /proc/sys/net/ipv4/ip_local_port_range
 ```
 
 ## 3、禁用透明页表
@@ -24,8 +22,6 @@ cat /proc/sys/net/ipv4/ip_local_port_range
  cat /sys/kernel/mm/redhat_transparent_hugepage/enabled
  echo 'never' > /sys/kernel/mm/redhat_transparent_hugepage/enabled
 ```
-
-
 
 ## 4、设置主机名
 
@@ -50,7 +46,7 @@ echo "oracle1" >> /etc/hosts
 
 ## 6、确定limit
 
-![1552540104482](image\1552540104482.png)
+![](/image/1552540104482.png)
 
 ```
 以安装所有者身份登录。
@@ -85,7 +81,6 @@ oracle soft nproc 2047
 oracle hard nproc 16384
 oracle soft nofile 1024
 oracle hard nofile 65536
-
 ```
 
 ## 7、确定内核配置
@@ -106,7 +101,6 @@ net.core.wmem_max = 1048576
 
 
 sysctl -p #使其生效
-
 ```
 
 ## 8、创建oracle基础目录
@@ -133,7 +127,6 @@ export PATH=$PATH:$ORACLE_HOME/bin
 export ORACLE_HOME=$ORACLE_HOME
 
 source ~/.bash_profile #激活环境变量
-
 ```
 
 ## 10、创建xrdp环境
@@ -142,7 +135,6 @@ source ~/.bash_profile #激活环境变量
 yum install xrdp tigervnc-server -y 
 service start xrdp
 在windows上使用远程桌面进行连接
-
 ```
 
 ## 11、解压oracle压缩包
@@ -150,7 +142,6 @@ service start xrdp
 ```
  unzip linux.x64_11gR2_database_1of2.zip
  unzip linux.x64_11gR2_database_2of2.zip
- 
 ```
 
 ## 12、进行安装
@@ -160,20 +151,7 @@ cd /data/database
 ./runInstaller
 如果中文乱码：
 export LANG=en-US
-
 ```
 
-![1552554456588](image\1552554456588.png)
-
-
-
-
-
-
-
-
-
-
-
-
+![](/image/1552554456588.png)
 
