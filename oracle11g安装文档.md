@@ -50,7 +50,7 @@ echo "oracle1" >> /etc/hosts
 
 ## 6、确定limit
 
-![1552540104482](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552540104482.png)
+![1552540104482](images\1552540104482.png)
 
 ```
 以安装所有者身份登录。
@@ -163,7 +163,7 @@ export LANG=en-US
 
 ```
 
-![1552554456588](C:\Users\wisdom\AppData\Roaming\Typora\typora-user-images\1552554456588.png)
+![1552554456588](images\1552554456588.png)
 
 
 
