@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: image
+---
+
 ## 1、安装相关依赖
 
 ```
